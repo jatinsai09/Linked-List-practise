@@ -78,7 +78,11 @@ void printList(Node *node)
 {
     while (node)
     {
-        cout << node->data << " ";
+        cout << node->data;
+        if (node->next != nullptr)
+        {
+            cout << " -> ";
+        }
         node = node->next;
     }
     cout << "\n";
@@ -97,4 +101,5 @@ int main()
     printList(head);
 
     return 0;
+
 }
